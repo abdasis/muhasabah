@@ -13,6 +13,21 @@ class Table extends DataTableComponent
     use DeleteConfirm;
     protected $model = ChartOfAccount::class;
 
+    public $listeners = ['confirmed' => 'deleted'];
+
+    public function deleted()
+    {
+        if ($this->model_id){
+            ChartOfAccount::find($this->model_id)->delete();
+            $this->alert('success', 'Berhasil',[
+                'text' => 'Data berhasil disimpan'
+            ]);
+        }else{
+            $this->alert('error', 'Kesalahan',[
+                'text' => 'Terjadi kesalahan saat menghapus data'
+            ]);
+        }
+    }
     public function configure(): void
     {
         $this->setPrimaryKey('id');
