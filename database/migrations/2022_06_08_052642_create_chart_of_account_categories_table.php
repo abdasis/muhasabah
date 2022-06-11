@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('contact_types', function (Blueprint $table) {
+        Schema::create('chart_of_account_categories', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('contact_id')->constrained()->cascadeOnDelete();
-            $table->enum('type', ['Customer', 'Supplier', 'Karyawan', 'Lainnya']);
+            $table->string('code');
+            $table->string('name');
+            $table->text('notes')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contact_types');
+        Schema::dropIfExists('chart_of_account_categories');
     }
 };

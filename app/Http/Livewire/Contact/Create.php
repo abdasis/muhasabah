@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Contact;
 
+use App\Models\ChartOfAccount;
 use App\Models\Contact;
 use App\Models\ContactType;
 use Illuminate\Support\Facades\DB;
@@ -31,7 +32,7 @@ class Create extends Component
     {
 
 
-        $this->validate();;
+        $this->validate();
         try {
             DB::beginTransaction();
             $contact = Contact::create([
@@ -82,6 +83,8 @@ class Create extends Component
     }
     public function render()
     {
-        return view('livewire.contact.create');
+        return view('livewire.contact.create',[
+            'chart_af_accounts' => ChartOfAccount::latest()->get(),
+        ]);
     }
 }

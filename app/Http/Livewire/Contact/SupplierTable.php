@@ -14,6 +14,8 @@ class SupplierTable extends DataTableComponent
     public function configure(): void
     {
         $this->setPrimaryKey('id');
+        $this->defaultSortColumn = 'created_at';
+        $this->defaultSortDirection = 'desc';
     }
 
     public function columns(): array

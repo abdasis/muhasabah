@@ -6,6 +6,7 @@
                 <i class="ri-contacts-book-2-line me-1"></i>
                 Semua Kontak
             </h4>
+            <p class="card-subtitle text-muted mb-0">Berikut adalah data selengkapnya untuk setiap jenis contact yang sudah tersimpan</p>
         </div>
         <div class="card-body">
             <ul class="nav nav-tabs mb-5 nav-justified" role="tablist">

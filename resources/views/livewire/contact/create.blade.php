@@ -145,22 +145,20 @@
                             Integrasi Akun
                         </h4>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6" wire:ignore>
                                 <x-form-select placeholder="Pilih Akun" class="form-select" wire:model.defer="debit_account" id="debet-account" name="debet_account" label="Akun Piutang">
                                     <option value="">Pilih Akun</option>
-                                    <option value="1">Pilih Akun</option>
-                                    <option value="2">Pilih Akun</option>
-                                    <option value="3">Pilih Akun</option>
-                                    <option value="4">Pilih Akun</option>
+                                    @foreach($chart_af_accounts as $account)
+                                        <option value="{{$account->id}}">{{$account->name}}</option>
+                                    @endforeach
                                 </x-form-select>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6" wire:ignore>
                                 <x-form-select placeholder="Pilih Akun" class="form-select" wire:model.defer="credit_account" id="credit-account" name="credit_account" label="Akun Piutang">
                                     <option value="">Pilih Akun</option>
-                                    <option value="2">Pilih Akun</option>
-                                    <option value="3">Pilih Akun</option>
-                                    <option value="4">Pilih Akun</option>
-                                    <option value="5">Pilih Akun</option>
+                                    @foreach($chart_af_accounts as $account)
+                                        <option value="{{$account->id}}">{{$account->name}}</option>
+                                    @endforeach
                                 </x-form-select>
                             </div>
                         </div>
@@ -183,11 +181,15 @@
         $('#debet-account').select2({
             theme: "bootstrap-5",
             dropdownCssClass: "select2--small",
+        }).on('change', function (event){
+            @this.set('debit_account', event.target.value)
         });
 
         $('#credit-account').select2({
             theme: "bootstrap-5",
             dropdownCssClass: "select2--small",
+        }).on('change', function (event){
+            @this.set('credit_account', event.target.value)
         });
     </script>
 @endpush

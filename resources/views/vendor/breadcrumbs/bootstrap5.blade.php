@@ -2,7 +2,12 @@
     <div class="row">
         <div class="col-12">
             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                <h4 class="mb-sm-0">{{ ($breadcrumb = Breadcrumbs::current()) ? $breadcrumb->title : 'Fallback Title' }}</h4>
+                <h4 class="mb-sm-0 d-flex align-items-center">
+                    <a href="{{url()->previous()}}">
+                        <i class="ri-arrow-go-back-line me-1"></i>
+                    </a>
+                    {{ ($breadcrumb = Breadcrumbs::current()) ? $breadcrumb->title : 'Fallback Title' }}
+                </h4>
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
                         @foreach ($breadcrumbs as $breadcrumb)

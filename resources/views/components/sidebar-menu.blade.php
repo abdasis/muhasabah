@@ -95,7 +95,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="widgets.html">
+                    <a class="nav-link menu-link" href="{{route('chart-of-account.index')}}">
                         <i class="ri-survey-line"></i> <span data-key="t-widgets">Daftar Akun</span>
                     </a>
                 </li>

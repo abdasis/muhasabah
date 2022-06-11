@@ -5,3 +5,8 @@
 input.select2-search__field {
     margin-top: 8px !important;
 }
+
+.select2-container--bootstrap-5 *:focus {
+    outline: none;
+    border: none;
+}

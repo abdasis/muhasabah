@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Livewire\Contact;
+namespace App\Http\Livewire\ChartOfAccountCategory;
 
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
-use App\Models\Contact;
+use App\Models\ChartOfAccountCategory;
 
 class Table extends DataTableComponent
 {
-    protected $model = Contact::class;
+    protected $model = ChartOfAccountCategory::class;
 
     public function configure(): void
     {

@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Livewire\ChartOfAccount\Create as CreateChartOfAccount;
+use App\Http\Livewire\ChartOfAccount\Edit as EditChartOfAccount;
+use App\Http\Livewire\ChartOfAccount\Index as IndexChartOfAccount;
+use App\Http\Livewire\ChartOfAccount\Show as ShowChartOfAccount;
 use App\Http\Livewire\Contact\Create;
 use App\Http\Livewire\Contact\Edit;
 use App\Http\Livewire\Contact\Index;
@@ -32,7 +36,15 @@ Route::middleware([
     Route::group(['prefix' => 'contact'], function (){
         Route::get('/', Index::class)->name('contact.index');
         Route::get('/create', Create::class)->name('contact.create');
-        Route::get('/{id}/edit', Edit::class)->name('contact.edit');
-        Route::get('/{id}/show', Show::class)->name('contact.show');
+        Route::get('/{contact}/edit', Edit::class)->name('contact.edit');
+        Route::get('/{contact}/show', Show::class)->name('contact.show');
+    });
+
+    //route untuk chart of account
+    Route::group(['prefix' => 'chart-of-account'], function (){
+        Route::get('/', IndexChartOfAccount::class)->name('chart-of-account.index');
+        Route::get('/create', CreateChartOfAccount::class)->name('chart-of-account.create');
+        Route::get('/{account}/edit', EditChartOfAccount::class)->name('chart-of-account.edit');
+        Route::get('/{account}/show', ShowChartOfAccount::class)->name('chart-of-account.show');
     });
 });

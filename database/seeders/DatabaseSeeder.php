@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\ChartOfAccountCategory;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -18,16 +19,18 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-         User::factory()->create([
-             'name' => 'Abd. Asis',
-             'email' => 'admin@demoapp.com',
-             'password' => bcrypt('rahasia123'),
-             'remember_token' => Str::random(10),
-         ]);
+        User::factory()->create([
+            'name' => 'Abd. Asis',
+            'email' => 'admin@demoapp.com',
+            'password' => bcrypt('rahasia123'),
+            'remember_token' => Str::random(10),
+        ]);
 
-         $this->call([
-             ContactSeeder::class
-         ]);
+        $this->call([
+            ContactSeeder::class,
+            ChartOfAccountCategorySeeder::class,
+            ChartOfAccountSeeder::class,
+        ]);
 
     }
 }
