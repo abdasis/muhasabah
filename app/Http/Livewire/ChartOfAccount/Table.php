@@ -31,6 +31,8 @@ class Table extends DataTableComponent
     public function configure(): void
     {
         $this->setPrimaryKey('id');
+        $this->setPerPageAccepted([10, 25, 50, 100, 500, 1000]);
+        $this->setPerPage(500);
     }
 
     public function columns(): array
@@ -40,7 +42,7 @@ class Table extends DataTableComponent
                 ->sortable(),
             Column::make('Kunci', 'lock_status')->format(function ($status){
                 if ($status == 'locked'){
-                    return '<i class="ri-lock-2-line fw-bolder"></i>';
+                    return '<i class="ri-lock-2-fill fw-bolder"></i>';
                 }else{
                     return '<i class="ri-lock-unlock-line"></i>';
                 }
