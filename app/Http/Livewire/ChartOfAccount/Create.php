@@ -26,11 +26,9 @@ class Create extends Component
     public function generateCode($category_id)
     {
         //mengambil data chart of account
-        $cart_of_account = ChartOfAccount::where('chart_of_account_category_id', $category_id)->latest()->first();
-
+        $cart_of_account = ChartOfAccount::where('chart_of_account_category_id', $category_id)->orderBy('code', 'desc')->first();
         //mengambil nomor terakhir
         $last_code = 0;
-
         if (empty($cart_of_account)){
             $last_code = 0;
         }else{
@@ -68,6 +66,7 @@ class Create extends Component
                 'report_type' => $this->report_type,
                 'default_balance' => $this->default_balance,
                 'lock_status' => $this->lock_status,
+                'description' => $this->description,
             ]);
 
             $this->alert('success', 'Berhasil', [
@@ -77,7 +76,6 @@ class Create extends Component
             $this->reset();
 
         }catch (\Exception $exception){
-            dd($exception);
             return $this->alert('error', 'Kesalahan', [
                 'text' => 'Terjadi kesalahan saat menyimpan data'
             ]);
