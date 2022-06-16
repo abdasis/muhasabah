@@ -104,7 +104,7 @@ class Edit extends Component
             $contact->contactType()->saveMany($type_contact);
 
             $this->alert('success', 'Berhasil', [
-                'text' => 'Data Berhasil Disimpan'
+                'text' => 'Data contact berhasil diperbarui'
             ]);
 
             DB::commit();
@@ -116,7 +116,7 @@ class Edit extends Component
     public function render()
     {
         return view('livewire.contact.edit', [
-            'chart_of_accounts' => ChartOfAccount::latest()->get()
+            'chart_af_accounts' => ChartOfAccount::latest()->get(),
         ]);
     }
 }
