@@ -30,12 +30,22 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        },
+        "files": [
+            "app/Helpers/Rupiah.php",
+            "app/Helpers/Romawi.php",
+            "app/Helpers/Terbilang.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
-        }
+        },
+        "files": [
+            "app/Helpers/Rupiah.php",
+            "app/Helpers/Romawi.php",
+            "app/Helpers/Terbilang.php"
+        ]
     },
     "scripts": {
         "post-autoload-dump": [

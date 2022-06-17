@@ -148,7 +148,7 @@
                             <div class="col-md-6" wire:ignore>
                                 <x-form-select placeholder="Pilih Akun" class="form-select" wire:model.defer="debit_account" id="debet-account" name="debet_account" label="Akun Piutang">
                                     <option value="">Pilih Akun</option>
-                                    @foreach($chart_of_accounts as $account)
+                                    @foreach($chart_af_accounts as $account)
                                         <option value="{{$account->id}}">{{$account->name}}</option>
                                     @endforeach
                                 </x-form-select>
@@ -156,7 +156,7 @@
                             <div class="col-md-6" wire:ignore>
                                 <x-form-select placeholder="Pilih Akun" class="form-select" wire:model.defer="credit_account" id="credit-account" name="credit_account" label="Akun Piutang">
                                     <option value="">Pilih Akun</option>
-                                    @foreach($chart_of_accounts as $account)
+                                    @foreach($chart_af_accounts as $account)
                                         <option value="{{$account->id}}">{{$account->name}}</option>
                                     @endforeach
                                 </x-form-select>
@@ -192,9 +192,9 @@
             @this.set('credit_account', event.target.value)
         });
 
-        Livewire.onLoad(function (event){
+        Livewire.onLoad((data) => {
             $('#debet-account').val(@this.debit_account).trigger('change');
             $('#credit-account').val(@this.credit_account).trigger('change');
-        })
+        });
     </script>
 @endpush

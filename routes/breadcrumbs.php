@@ -55,3 +55,25 @@ Breadcrumbs::for('chart-of-account.show', function (BreadcrumbTrail $trail, $id)
     $trail->parent('chart-of-account.index');
     $trail->push('Detail Akun', route('chart-of-account.show', $id));
 });
+
+//breadcrumbs untuk product
+Breadcrumbs::for('products.index', function (BreadcrumbTrail $trail){
+    $trail->parent('dashboard');
+    $trail->push('Daftar Produk', route('products.index'));
+});
+
+Breadcrumbs::for('products.create', function (BreadcrumbTrail $trail){
+    $trail->parent('products.index');
+    $trail->push('Tambah Produk', route('products.create'));
+});
+
+Breadcrumbs::for('products.show', function (BreadcrumbTrail $trail, $id){
+    $trail->parent('products.index');
+    $trail->push('Detail Produk', route('products.show', $id));
+});
+
+Breadcrumbs::for('products.edit', function (BreadcrumbTrail $trail, $id){
+    $trail->parent('products.index');
+    $trail->push('Sunting Produk', route('products.edit', $id));
+});
+

@@ -624,7 +624,7 @@
                         <div>
                             <button
                                 type="button"
-                                class="btn dropdown-toggle d-block w-100 d-md-inline"
+                                class="btn bg-soft-light border dropdown-toggle d-flex align-items-center"
 
                                 @if ($component->isFilterLayoutPopover())
                                     x-on:click="open = !open"
@@ -637,6 +637,7 @@
                                     x-on:click="filtersOpen = !filtersOpen"
                                 @endif
                             >
+                                <i class="ri-filter-2-fill me-1"></i>
                                 @lang('Filters')
 
                                 @if ($count = $component->getFilterBadgeCount())
@@ -698,7 +699,8 @@
             @if ($component->showBulkActionsDropdown())
                 <div class="mb-3 mb-md-0">
                     <div class="dropdown d-block d-md-inline">
-                        <button class="btn dropdown-toggle d-block w-100 d-md-inline" type="button" id="{{ $component->getTableName() }}-bulkActionsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn bg-soft-light border dropdown-toggle d-block w-100 d-md-inline" type="button" id="{{ $component->getTableName() }}-bulkActionsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="bx bx-link-alt me-1"></i>
                             @lang('Bulk Actions')
                         </button>
 
@@ -729,12 +731,13 @@
                     >
                         <button
                             x-on:click="open = !open"
-                            class="btn btn-soft-dark dropdown-toggle d-block w-100 d-md-inline"
+                            class="btn bg-soft-light border dropdown-toggle d-flex align-items-center"
                             type="button"
                             id="columnSelect-{{ $component->getTableName() }}"
                             aria-haspopup="true"
                             x-bind:aria-expanded="open"
                         >
+                            <i class="ri-layout-line me-1"></i>
                             @lang('Columns')
                         </button>
 

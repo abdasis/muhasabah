@@ -53,19 +53,19 @@
         </table>
     </div>
 @elseif ($theme === 'bootstrap-4' || $theme === 'bootstrap-5')
-    <div {{ 
+    <div {{
         $attributes->merge($customAttributes['wrapper'])
             ->class(['table-responsive' => $customAttributes['wrapper']['default'] ?? true])
             ->except('default')
     }}>
         <table {{
             $attributes->merge($customAttributes['table'])
-                ->class(['table table-striped' => $customAttributes['table']['default'] ?? true])
+                ->class(['table table-nowrap' => $customAttributes['table']['default'] ?? true])
                 ->except('default')
         }}>
             <thead {{
                 $attributes->merge($customAttributes['thead'])
-                    ->class(['' => $customAttributes['thead']['default'] ?? true])
+                    ->class(['bg-light' => $customAttributes['thead']['default'] ?? true])
                     ->except('default')
             }}>
                 <tr>

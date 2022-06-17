@@ -14,6 +14,10 @@
 
     <link href="{{asset('assets/libs/sweetalert2/sweetalert2.min.css')}}" rel="stylesheet" type="text/css">
 
+    <!-- App css -->
+    <link rel="stylesheet" href="{{asset('assets/libs/filepond/filepond.min.css')}}" type="text/css" />
+    <link rel="stylesheet" href="{{asset('assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css')}}">
+
     <!-- Layout config Js -->
     <script src="{{asset('assets/js/layout.js')}}"></script>
     <!-- Bootstrap Css -->
@@ -85,6 +89,17 @@
 <script src="{{asset('assets/libs/node-waves/waves.min.js')}}"></script>
 <script src="{{asset('assets/libs/feather-icons/feather.min.js')}}"></script>
 <script src="{{asset('assets/js/pages/plugins/lord-icon-2.1.0.js')}}"></script>
+
+
+<!-- include FilePond library -->
+<script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
+
+<!-- include FilePond plugins -->
+<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"></script>
+
+<!-- include FilePond jQuery adapter -->
+<script src="https://unpkg.com/jquery-filepond/filepond.jquery.js"></script>
+
 
 <!-- App js -->
 <script src="{{asset('assets/js/app.js')}}"></script>

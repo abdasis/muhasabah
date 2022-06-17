@@ -100,7 +100,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="widgets.html">
+                    <a class="nav-link menu-link" href="{{route('products.index')}}">
                         <i class="ri-inbox-archive-fill"></i> <span data-key="t-widgets">Product</span>
                     </a>
                 </li>

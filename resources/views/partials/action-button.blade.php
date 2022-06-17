@@ -1,4 +1,4 @@
-<ul class="list-inline hstack gap-2 mb-0">
+<ul class="list-inline hstack gap-2 p-0 my-0">
     @if(!empty($edit))
         <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="" data-bs-original-title="Sunting">
             <a href="{{$edit}}" class="text-muted d-inline-block">

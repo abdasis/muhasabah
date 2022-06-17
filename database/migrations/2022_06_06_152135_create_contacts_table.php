@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('last_name')->nullable();
             $table->string('handphone')->nullable();
             $table->string('email')->unique();
-            $table->string('id_type')->nullable();
+            $table->enum('id_type', ['KTP', 'SIM', 'PASSPORT', 'LAINNYA'])->nullable();
             $table->string('identity_number')->nullable();
             $table->string('company_name')->nullable();
             $table->string('npwp')->nullable();

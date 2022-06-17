@@ -9,18 +9,11 @@ use App\Http\Livewire\Contact\Edit;
 use App\Http\Livewire\Contact\Index;
 use App\Http\Livewire\Contact\Show;
 use App\Http\Livewire\Dashboard;
+use App\Http\Livewire\Product\Create as CreateProduct;
+use App\Http\Livewire\Product\Edit as EditProduct;
+use App\Http\Livewire\Product\Index as IndexProduct;
+use App\Http\Livewire\Product\Show as ShowProduct;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', function () {
     return redirect()->route('login');
@@ -46,5 +39,13 @@ Route::middleware([
         Route::get('/create', CreateChartOfAccount::class)->name('chart-of-account.create');
         Route::get('/{account}/edit', EditChartOfAccount::class)->name('chart-of-account.edit');
         Route::get('/{account}/show', ShowChartOfAccount::class)->name('chart-of-account.show');
+    });
+
+    //route untuk produk
+    Route::group(['prefix' => 'product'], function (){
+        Route::get('/', IndexProduct::class)->name('products.index');
+        Route::get('/create', CreateProduct::class)->name('products.create');
+        Route::get('/{product}/edit', EditProduct::class)->name('products.edit');
+        Route::get('/{product}/show', ShowProduct::class)->name('products.show');
     });
 });

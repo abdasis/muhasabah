@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\ChartOfAccountCategory;
+use App\Models\Product;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -30,6 +31,8 @@ class DatabaseSeeder extends Seeder
             ContactSeeder::class,
             ChartOfAccountCategorySeeder::class,
             ChartOfAccountSeeder::class,
+            ProductCategorySeeder::class,
+            ProductSeeder::class,
         ]);
 
     }

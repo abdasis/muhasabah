@@ -47,11 +47,15 @@
                 </div>
                 <div class="col-md-7">
                     <div class="inner-box p-2">
-                        <h5 class="text-primary d-flex align-items-center">
-                            <i class="ri-building-line me-1"></i>
-                            <span>Tentang Perusahaan</span>
-                        </h5>
                         <table class="table table-borderless mt-3">
+                            <tr>
+                                <td>
+                                    <h5 class="text-primary d-flex align-items-center">
+                                        <i class="ri-building-line me-1"></i>
+                                        <span>Tentang Perusahaan</span>
+                                    </h5>
+                                </td>
+                            </tr>
                             <tr>
                                 <td>Nama Perusahaan</td>
                                 <td>:</td>
@@ -77,12 +81,14 @@
                                 <td>:</td>
                                 <td>{{$contact->address}}</td>
                             </tr>
-                        </table>
-                        <h5 class="text-primary d-flex align-items-center">
-                            <i class="ri-bank-line me-1"></i>
-                            <span>Tentang Bank</span>
-                        </h5>
-                        <table class="table table-borderless mt-3">
+                            <tr>
+                                <td>
+                                    <h5 class="text-primary d-flex align-items-center">
+                                        <i class="ri-bank-line me-1"></i>
+                                        <span>Info Bank</span>
+                                    </h5>
+                                </td>
+                            </tr>
                             <tr>
                                 <td>Nama Bank</td>
                                 <td>:</td>
@@ -106,7 +112,6 @@
                         </table>
                         <div class="py-3 border-top border-top-dashed border-bottom border-bottom-dashed mt-4">
                             <div class="row">
-
                                 <div class="col-lg-3 col-sm-6">
                                     <div>
                                         <p class="mb-2 text-uppercase fw-medium">Tgl. Dibuat :</p>

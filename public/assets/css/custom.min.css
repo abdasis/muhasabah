@@ -20,3 +20,11 @@ input.select2-search__field {
     border-color: #86b7fe;
     box-shadow: none !important;
 }
+
+.select2-container--bootstrap-5 .select2-selection--multiple .select2-search .select2-search__field {
+    margin-top: 2px !important;
+}
+
+.select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice {
+    font-size: 12px !important;
+}

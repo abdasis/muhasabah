@@ -31,7 +31,7 @@
                         >
                             <span class="sr-only">@lang('Remove filter option')</span>
                             <svg class="h-2 w-2" stroke="currentColor" fill="none" viewBox="0 0 8 8">
-                                <path stroke-linecap="round" stroke-width="1.5" d="M1 1l6 6m0-6L1 7" />
+                                <path stroke-linecap="round" stroke-width="1.5" d="M1 1l6 6m0-6L1 7"/>
                             </svg>
                         </button>
                     </span>
@@ -41,7 +41,8 @@
                     wire:click.prevent="setFilterDefaults"
                     class="focus:outline-none active:outline-none"
                 >
-                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-200 dark:text-gray-900">
+                    <span
+                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-200 dark:text-gray-900">
                         @lang('Clear')
                     </span>
                 </button>
@@ -75,7 +76,7 @@
                         >
                             <span class="sr-only">@lang('Remove filter option')</span>
                             <svg style="width:.5em;height:.5em" stroke="currentColor" fill="none" viewBox="0 0 8 8">
-                                <path stroke-linecap="round" stroke-width="1.5" d="M1 1l6 6m0-6L1 7" />
+                                <path stroke-linecap="round" stroke-width="1.5" d="M1 1l6 6m0-6L1 7"/>
                             </svg>
                         </a>
                     </span>
@@ -107,7 +108,7 @@
 
                     <span
                         wire:key="{{ $component->getTableName() }}-filter-pill-{{ $filter->getKey() }}"
-                        class="badge rounded-pill bg-info d-inline-flex align-items-center"
+                        class="badge badge-label bg-success d-inline-flex align-items-center"
                     >
                         {{ $filter->getFilterPillTitle() }}: {{ $filter->getFilterPillValue($value) }}
 
@@ -118,7 +119,7 @@
                         >
                             <span class="visually-hidden">@lang('Remove filter option')</span>
                             <svg style="width:.5em;height:.5em" stroke="currentColor" fill="none" viewBox="0 0 8 8">
-                                <path stroke-linecap="round" stroke-width="1.5" d="M1 1l6 6m0-6L1 7" />
+                                <path stroke-linecap="round" stroke-width="1.5" d="M1 1l6 6m0-6L1 7"/>
                             </svg>
                         </a>
                     </span>
@@ -127,7 +128,7 @@
                 <a
                     href="#"
                     wire:click.prevent="setFilterDefaults"
-                    class="badge rounded-pill bg-light text-dark text-decoration-none"
+                    class="badge bg-light text-dark text-decoration-none"
                 >
                     @lang('Clear')
                 </a>

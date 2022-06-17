@@ -38,8 +38,6 @@ class Table extends DataTableComponent
     public function columns(): array
     {
         return [
-            Column::make("Id", "id")
-                ->sortable(),
             Column::make('Kunci', 'lock_status')->format(function ($status){
                 if ($status == 'locked'){
                     return '<i class="ri-lock-2-fill fw-bolder"></i>';
